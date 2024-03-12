@@ -6,33 +6,10 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
 
-       /* System.out.println("atLeast8Characters");
-        System.out.println(CheckIfStringContains.atLeast8Characters("123"));
-        System.out.println(CheckIfStringContains.atLeast8Characters("12345678"));
 
-        System.out.println("containsDigits");
-
-        System.out.println(CheckIfStringContains.containsDigits("1dsfdsf23"));
-        System.out.println(CheckIfStringContains.containsDigits("dsfdsf"));
-
-
-
-        System.out.println("uppercaseAndLowercase");
-        System.out.println(CheckIfStringContains.uppercaseAndLowercase("UUUUsdfsdf"));
-        System.out.println(CheckIfStringContains.uppercaseAndLowercase("sdfsdf"));
-        System.out.println(CheckIfStringContains.uppercaseAndLowercase("IUZTZUI"));
-
-
-        System.out.println("specialCharacters");
-
-        System.out.println(CheckIfStringContains.specialCharacters("1!()_:-23"));
-        System.out.println(CheckIfStringContains.specialCharacters("123"));
-
-        */
 
         System.out.println("checkPasswordValidation");
         System.out.println("final : "+checkPasswordValidation("sdffsd3445435ASDASD____"));
-
         System.out.println("final : "+checkPasswordValidation("sdffsd3445435____"));
         System.out.println("final : "+checkPasswordValidation("3445435ASDASD____"));
         System.out.println("final : "+checkPasswordValidation("sdffsdASDASD____"));
@@ -64,13 +41,10 @@ public class Main {
         System.out.println("Password : "+password);
         System.out.println("");
 
-
-
         System.out.println("CheckIfStringContains.atLeast8Characters : " + CheckIfStringContains.atLeast8Characters(password));
         System.out.println("CheckIfStringContains.containsDigits : " + CheckIfStringContains.containsDigits(password));
         System.out.println("CheckIfStringContains.uppercaseAndLowercase : " + CheckIfStringContains.uppercaseAndLowercase(password));
         System.out.println("CheckIfStringContains.specialCharacters : " + CheckIfStringContains.specialCharacters(password));
-
 
 
         return  CheckIfStringContains.atLeast8Characters(password) &&
@@ -85,8 +59,6 @@ public class Main {
 
 
     static public String generatePassword() {
-
-
 
         Random random = new Random();
         //random.nextInt(max - min + 1) + min
@@ -117,19 +89,8 @@ public class Main {
         String lowercase = sallower.toString();
         String special = salspecial.toString();
 
-
-
-
-
         return digits + uppercase + lowercase +  special ;
     }
-
-
-
-
-
-
-
 }
 
 
@@ -137,11 +98,9 @@ public class Main {
 
  class CheckIfStringContains {
 
-
      static public boolean atLeast8Characters( String password) {
          return password.length() >= 8;
      }
-
 
      static public boolean containsDigits( String password) {
          return password.matches(".*[0-9].*");
@@ -151,25 +110,11 @@ public class Main {
          return password.matches(".*[A-Z].*") && password.matches(".*[a-z].*");
      }
 
-
-
-
-
      static public boolean aCommonlyUsedPasswords ( String password) {
-
-
-
          return false;
      }
-
 
      static public boolean specialCharacters ( String password) {
          return password.matches(".*[!@#$%&*()_+=|<>?{}\\[\\]~-].*");
      }
-
-
-
-
-
-
 }
