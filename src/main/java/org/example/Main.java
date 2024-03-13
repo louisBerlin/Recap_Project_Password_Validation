@@ -13,7 +13,6 @@ public class Main {
         System.out.println("final : "+SingeltonPassword.isValidation("sdffsdASDASD____"));
         System.out.println("final : "+SingeltonPassword.isValidation("sdffsdASDASD"));
 
-
         System.out.println();
         System.out.println();
         System.out.println("----------------------------------");
