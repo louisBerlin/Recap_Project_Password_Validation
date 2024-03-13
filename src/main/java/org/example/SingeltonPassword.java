@@ -25,8 +25,8 @@ public class SingeltonPassword {
          String[] commonsPasswords = {"1234","Password1"};
 
        for ( String pass : commonsPasswords )
-           if(password.equals(pass))return false;
-        return true;
+           if(password.equals(pass))return true;
+        return false;
     }
 
     static public boolean containsSpecialCharacters(String password) {
@@ -60,7 +60,7 @@ public class SingeltonPassword {
                 containsDigits(password)  &&
                 containsUpercaseAndLowercase(password) &&
                 containsSpecialCharacters(password)  &&
-                containsACommonlyUsedPasswords(password);
+                !containsACommonlyUsedPasswords(password);
     }
 
 

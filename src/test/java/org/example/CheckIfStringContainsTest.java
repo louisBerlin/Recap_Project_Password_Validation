@@ -49,4 +49,16 @@ class CheckIfStringContainsTest {
     void specialCharacters_shouldBeFalse() {
         Assertions.assertEquals(SingeltonPassword.containsSpecialCharacters("asd"),false);
     }
+
+
+
+    @Test
+    void commonlyUsedPasswords_shouldBeTrue() {
+        Assertions.assertEquals(!SingeltonPassword.containsACommonlyUsedPasswords("abc"),true);
+    }
+
+    @Test
+    void commonlyUsedPasswords_shouldBeFalse() {
+        Assertions.assertEquals(!SingeltonPassword.containsACommonlyUsedPasswords("1234"),false);
+    }
 }
