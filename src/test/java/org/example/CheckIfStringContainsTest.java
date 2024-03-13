@@ -45,8 +45,6 @@ class CheckIfStringContainsTest {
         Assertions.assertEquals(SingeltonPassword.containsSpecialCharacters("asd+*="),true);
     }
 
-
-
     @Test
     void specialCharacters_shouldBeFalse() {
         Assertions.assertEquals(SingeltonPassword.containsSpecialCharacters("asd"),false);
